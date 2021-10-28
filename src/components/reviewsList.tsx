@@ -13,10 +13,11 @@ export const ReviewsList = (props: { reviews: Review[] }) => {
   return (
     <div className="reviewList">
       {props.reviews.map((review) => (
-        <div key={review.id} className="reviewCard">
+        <button key={review.id} className="reviewCard">
           <img
             src={avatars[Math.floor(Math.random() * avatars.length)]}
             alt="avatar-image"
+            className="avatar"
           />
           <div className="rating">
             <p>{review.author}</p>
@@ -27,7 +28,7 @@ export const ReviewsList = (props: { reviews: Review[] }) => {
               starRatedColor="#FDCC0D"
             />
           </div>
-        </div>
+        </button>
       ))}
     </div>
   );

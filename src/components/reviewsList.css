@@ -11,8 +11,14 @@
   padding: 10px;
   margin: 10px;
   width: 250px;
-  border: 1px solid;
+  border: none;
+  box-shadow: 0 0 0.7rem #cccccc;
+  background-color: #fff;
   border-radius: 5px;
+}
+
+.reviewCard:hover {
+  background-color: #f0f3f5;
 }
 
 .rating {
@@ -20,7 +26,7 @@
   flex-direction: column;
 }
 
-img {
+.avatar {
   width: 100px;
   height: 100px;
   border: 1 solid;
