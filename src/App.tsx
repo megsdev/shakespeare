@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { fetchAll } from "./fetch";
 import { Review } from "./interfaces";
-import { ReviewsList } from "./components/reviewsList";
-import "./App.css";
 import { Header } from "./components/header";
+import { ReviewsList } from "./components/reviewsList";
+import { FullReview } from "./components/fullReview";
+import "./App.css";
 
 const App = () => {
   const [reviews, setReviews] = React.useState<Review[]>([]);
-  const [isListView, setIsListView] = React.useState();
+  const [selectedReview, setSelectedReview] = React.useState(null);
 
   useEffect(() => {
     async function getReviews() {
@@ -20,7 +21,14 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <ReviewsList reviews={reviews} />
+      {selectedReview === null ? (
+        <ReviewsList reviews={reviews} setSelectedReview={setSelectedReview} />
+      ) : (
+        <FullReview
+          review={selectedReview}
+          setSelectedReview={setSelectedReview}
+        />
+      )}
     </div>
   );
 };

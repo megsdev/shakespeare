@@ -1,19 +1,28 @@
 import StarRatings from "react-star-ratings";
+import avatars from "../assets/avatars";
 import "./reviewsList.css";
-import hamlet from "../assets/hamlet.png";
-import juliet from "../assets/juliet.png";
-import ladymacbeth from "../assets/ladymacbeth.png";
-import romeo from "../assets/romeo.png";
-import witch from "../assets/witch.png";
+import { fetch } from "../fetch";
+
 import { Review } from "../interfaces";
+import { Dispatch } from "react";
 
-const avatars = [hamlet, juliet, ladymacbeth, romeo, witch];
+export const ReviewsList = (props: {
+  reviews: Review[];
+  setSelectedReview: Dispatch<Review>;
+}) => {
+  const onClick = async (id: number) => {
+    const selectedReview = await fetch(id);
+    props.setSelectedReview(selectedReview);
+  };
 
-export const ReviewsList = (props: { reviews: Review[] }) => {
   return (
     <div className="reviewList">
       {props.reviews.map((review) => (
-        <button key={review.id} className="reviewCard">
+        <button
+          key={review.id}
+          className="reviewCard"
+          onClick={() => onClick(review.id)}
+        >
           <img
             src={avatars[Math.floor(Math.random() * avatars.length)]}
             alt="avatar-image"

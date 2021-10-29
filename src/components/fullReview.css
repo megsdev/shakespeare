@@ -1,0 +1,33 @@
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+  margin: 10px;
+  border: none;
+  box-shadow: 0 0 0.7rem #cccccc;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.reviewContent {
+  display: flex;
+  align-items: center;
+}
+
+.closeButton {
+  position: absolute;
+  align-self: flex-end;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: initial;
+  margin-left: 12px;
+}
+
+.rating p {
+  margin: 5px 0;
+}
