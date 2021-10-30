@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npx mocha",
+    "test": "TS_NODE_PROJECT='./tsconfig.commonjs.json' mocha -r ts-node/register",
     "eject": "react-scripts eject"
   },
   "dependencies": {
