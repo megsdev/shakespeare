@@ -25,7 +25,7 @@ export const ReviewsList = (props: {
         >
           <img
             src={avatars[Math.floor(Math.random() * avatars.length)]}
-            alt="avatar-image"
+            alt="avatar"
             className="avatar"
           />
           <div className="rating">
