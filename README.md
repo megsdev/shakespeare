@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# Welcome to Shakespeare's Reviews
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You should have been provided with a `.env` file. You will need to place that in the root directory of this project before spinning it up.
 
-## Available Scripts
+## Known bug:
+Fay Lemke's review comes with a punctuation error in the body from the API. A preferred engineering practice would be to talk to maintainers of the API about fixing the error rather than fix it on the front end. 
+
+## Things I'd do differently in a production-ready app:
+- Avatar images would be part of the API and passed around with the review object to ensure consistency over the current random selection.
+- 'X' button would an icon instead of the letter.
+- Wouldn't make 2nd call to the API when all the data is available in the array of reviews. I did this here to illustrate an ability to make multiple API calls.
+
+## Thoughts on next steps:
+- Add ability to sort reviews by date or rating.
+- Add average rating and ability to filter reviews by number of stars.
+- Add ability to leave a review.
+
+## Useful Scripts
 
 In the project directory, you can run:
+
+### `npm i`
+
+Installs recquired packages.
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
